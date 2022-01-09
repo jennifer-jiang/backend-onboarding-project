@@ -19,6 +19,8 @@ yarn watch # this will run the server and auto recompile/re-run it anytime you m
 
 We've detailed the required routes for the project here. We highly recommend that you use something like [Postman](https://www.postman.com/) to test out your routes (although the final version of the server should work with the provided frontend).
 
+A diagram detailing the database structure can be found [here](https://dbdiagram.io/d/61db423ef8370f0a2ee93059).
+
 - [ ] `GET /items` - returns a list of all the items
   - Response
     - an array of objects of the following shape
