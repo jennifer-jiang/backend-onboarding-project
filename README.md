@@ -6,11 +6,11 @@ In this project, you'll be implementing the required backend functions to make a
 
 This project uses Node.js with Typescript, and uses the ExpressJS framework + Docker to run the Postgres DB.
 
-```
-	# after cloning
-	yarn install
-	yarn watch # this will run the server and auto recompile/re-run it anytime you make a change
-	# navigate to localhost:3000 to see the server!
+```bash
+# after cloning
+yarn install
+yarn watch # this will run the server and auto recompile/re-run it anytime you make a change
+# navigate to localhost:3000 to see the server!
 ```
 
 ## TODOS
