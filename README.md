@@ -15,6 +15,8 @@ yarn watch # this will run the server and auto recompile/re-run it anytime you m
 
 ## TODOS
 
+**Note**: This is a HUGE initial project to do. We're planning 2-3 weeks for each of you to work on this, although it's totally possible to finish this earlier. We **expect** and **want** you to ask us lots of questions! The best developers ask many questions, and understand that there's really no such thing as a *dumb* question.
+
 We've detailed the required routes for the project here. We highly recommend that you use something like [Postman](https://www.postman.com/) to test out your routes (although the final version of the server should work with the provided frontend).
 
 - [ ] `GET /items` - returns a list of all the items
@@ -31,6 +33,9 @@ We've detailed the required routes for the project here. We highly recommend tha
     - `price`: the price of the item
   - Response:
     - `uuid`: the newly created item's uuid
+- [ ] `DELETE /items/:uuid` - deletes an item
+  - Response:
+    - non 200 status code if there was a failure, 200 status code if it suceeded
 - [ ] `POST /order` - creates an order
   - Input (Body, in json or form data)
     - `itemId`: the uuid corresponding with the item
