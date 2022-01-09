@@ -15,9 +15,15 @@ yarn watch # this will run the server and auto recompile/re-run it anytime you m
 
 ## TODOS
 
-**Note**: This is a HUGE initial project to do. We're planning 2-3 weeks for each of you to work on this, although it's totally possible to finish this earlier. We **expect** and **want** you to ask us lots of questions! The best developers ask many questions, and understand that there's really no such thing as a *dumb* question.
+### Note
+
+This is a HUGE initial project to do. We're planning 2-3 weeks for each of you to work on this, although it's totally possible to finish this earlier. We **expect** and **want** you to ask us lots of questions! The best developers ask many questions, and understand that there's really no such thing as a *dumb* question.
 
 We've detailed the required routes for the project here. We highly recommend that you use something like [Postman](https://www.postman.com/) to test out your routes (although the final version of the server should work with the provided frontend).
+
+### Setting up your Database
+
+We intentionally hid the ORM abstraction layer from you initially. Please make sure you pull the DB layer by running `git pull orm` before starting the project.
 
 A diagram detailing the database structure can be found [here](https://dbdiagram.io/d/61db423ef8370f0a2ee93059).
 
