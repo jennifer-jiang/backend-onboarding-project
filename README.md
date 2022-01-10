@@ -1,6 +1,8 @@
 # Backend Onboarding Project
 
-In this project, you'll be implementing the required backend functions to make a merchandise store function. This will be consumed by the completed version of the [Frontend Onboarding Project](linknotmadeyet).
+In this project, you'll be implementing the required backend functions to make a merchandise store function. This will be consumed by the completed version of the [Frontend Onboarding Project](https://github.com/acmucsd/frontend-onboarding-project).
+
+If you're looking for the slides for the presentation, check that out [here](https://docs.google.com/presentation/d/11Nw6POU-6kpVx5bcL1GPg-feVjUiNWPdjTVUfKMytW8)
 
 ## How to Run
 
