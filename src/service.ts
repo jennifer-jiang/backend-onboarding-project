@@ -1,9 +1,9 @@
 import { v4 } from 'uuid';
 
 interface Item {
-	name: string,
-	price: number,
-	uuid: string
+  name: string,
+  price: number,
+  uuid: string
 }
 
 /**
@@ -16,13 +16,13 @@ interface Item {
 const db: Record<string, Item> = {};
 
 export const createItem = (name: string, price: number) => {
-	if (name in db) {
-		throw new Error('item already exists!');
-	}
-	db[name] = {
-		name,
-		price,
-		uuid: v4()
-	};
-	return db[name].uuid;
+  if (name in db) {
+    throw new Error('item already exists!');
+  }
+  db[name] = {
+    name,
+    price,
+    uuid: v4()
+  };
+  return db[name].uuid;
 };

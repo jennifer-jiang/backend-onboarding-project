@@ -10,7 +10,7 @@ app.use(bodyParser.json()); // regular json payloads
 app.use(bodyParser.urlencoded({ extended: true })); // html form payloads
 
 app.get('/', (req, res) => {
-	res.sendFile(path.join(__dirname, 'static', 'index.html'));
+  res.sendFile(path.join(__dirname, 'static', 'index.html'));
 });
 
 // We're disabling bearer-based authentication for this example since it'll make it tricky to test with pure html
@@ -32,20 +32,20 @@ app.get('/', (req, res) => {
 
 // handle all POST requests that match '/'
 app.post('/item', (req: Request, res: Response) => {
-	if (!('name' in req.body) || !('price' in req.body)) {
-		res.status(400).send('Missing required variables!');
-	}
-	const name = req.body.name as string;
-	const price = Number(req.body.price);
-	if (name.length < 0 || name.length > 26 || isNaN(price)) {
-		return res.status(400).send('Invalid argument shape!');
-	}
-	const uuid = createItem(name, price);
-	return res.send({
-		uuid
-	});
+  if (!('name' in req.body) || !('price' in req.body)) {
+    res.status(400).send('Missing required variables!');
+  }
+  const name = req.body.name as string;
+  const price = Number(req.body.price);
+  if (name.length < 0 || name.length > 26 || isNaN(price)) {
+    return res.status(400).send('Invalid argument shape!');
+  }
+  const uuid = createItem(name, price);
+  return res.send({
+    uuid
+  });
 });
 
 app.listen(port, () => {
-	return console.log(`Express is listening at http://localhost:${port}`);
+  return console.log(`Express is listening at http://localhost:${port}`);
 });
