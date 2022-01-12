@@ -41,8 +41,4 @@ router.post('/item', async (req: Request, res: Response) => {
       uuid
     });
   });
-  const uuid = createItem(name, price);
-  return res.send({
-    uuid
-  });
 });
