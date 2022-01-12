@@ -19,10 +19,10 @@ app.use(bodyParser.urlencoded({ extended: true })); // html form payloads
 const main = async () => {
   const conn = await createConnection({
     type: 'postgres',
-    host: "localhost",
-    port: 5432,
+    host: "localhost", // our computer!
+    port: 5432, // postgres default locations
     username: "test",
-    password: "password",
+    password: "password", // security is our passion
     database: "testdb",
     entities: [
       Item
@@ -36,6 +36,7 @@ const main = async () => {
     req.dbConnection = conn;
     return next();
   });
+
   app.use(router);
   app.listen(port, () => {
     return console.log(`Express is listening at http://localhost:${port}`);

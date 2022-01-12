@@ -7,9 +7,10 @@ export const createItem = async (conn: Connection, name: string, price: number) 
   item.name = name;
   item.description = "TODO: FILL THIS OUT";
   item.price = price;
-  const createdItem = await conn.manager.save(item);
+  const createdItem = await conn.manager.save(item); // goes to the database, run a sql query and insert an item, then return the created item
   return createdItem.uuid;
 };
+
 export const deleteItem = (name: string) => {
   // if (name in db) {
   //   delete db[name];
@@ -17,3 +18,10 @@ export const deleteItem = (name: string) => {
   //   throw new Error("item not found!")
   // }
 }
+
+/**
+ * line1
+ * await line2 -> db call
+ * line3
+ * line4
+ */
