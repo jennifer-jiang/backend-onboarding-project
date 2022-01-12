@@ -96,3 +96,7 @@ A diagram detailing the database structure can be found [here](https://dbdiagram
       - `item`: the item that was purchased with this order
       - `price`: the price of the item that was purchased
       - `createdAt` the time the order was placed
+
+## Credits
+
+This tutorial was written by [Ronak Shah](https://ronakshah.org). Special thanks to Steven Steiner, Shravan Hariharan, and Matei Gardus for giving feedback and advice.
