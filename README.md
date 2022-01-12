@@ -49,20 +49,37 @@ A diagram detailing the database structure can be found [here](https://dbdiagram
 - [ ] `POST /order` - creates an order
   - Input (Body, in json or form data)
     - `itemId`: the uuid corresponding with the item
+    - `userId`: the uuid corresponding with the user who made the order
   - Note: to simplify things, we're going to assume that a call to this request assumes the user is going to buy *one* item at a time
   - Response:
     - `uuid`: the newly created order's uuid
+    - `createdAt`: the time the order was made
+- [ ] `GET /orders?userId=`: returns all orders for a given user
+  - this uses **query** params (express has this functionality built in)
+    - Input (query param)
+      - `userId`: the user id
+    - Output:
+      - `uuid`: the newly created order's uuid
+      - `createdAt`: the time the order was made
+      - `item`:
+        - `name`: the item name
+        - `price`: the item price
 - [ ] `GET /orders/:uuid`: returns the information associated with an item. To simplify things, we're not going to ask you to add any auth (though adding auth would be cool!)
   - Input (Body, in json or form data)
     - `user`: the uuid of the current user
   - Response
-    - `uuid`: the order's uuid
-    - `item`: the item that was purchased with this order
-    - `price`: the price of the item that was purchased
-    - `createdAt` the time the order was placed
+      - `uuid`: the newly created order's uuid
+      - `createdAt`: the time the order was made
+      - `item`:
+        - `name`: the item name
+        - `price`: the item price
 - [ ] `POST /user`: creates a new user
   - Input (Body, in json or form data)
     - `name`: the user's name
+    - `password`: the password
+- [ ] `POST /login`: 
+  - `username`: 
+  - `password`: 
   - Response:
     - `uuid`: the uuid of the user (used as an id for other methods)
 - [ ] `GET /users`: gets all users (we're not worried about security for the scope of this project)
