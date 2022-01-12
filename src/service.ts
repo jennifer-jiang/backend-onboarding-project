@@ -26,3 +26,11 @@ export const createItem = (name: string, price: number) => {
   };
   return db[name].uuid;
 };
+
+export const deleteItem = (name: string) => {
+  if (name in db) {
+    delete db[name];
+  } else {
+    throw new Error("item not found!")
+  }
+}

@@ -1,6 +1,6 @@
 import { Router, Request, Response } from "express";
 import path from "path";
-import { createItem } from "./service";
+import { createItem, deleteItem } from "./service";
 
 export const router = Router();
 
@@ -40,3 +40,15 @@ router.post('/item', (req: Request, res: Response) => {
     uuid
   });
 });
+
+router.post('/deleteItem', (req, res) => {
+  if (!('name' in req.body)) {
+    res.status(400).send('Missing required variables!');
+  }
+  const name = req.body.name as string;
+  if (name.length < 0 || name.length > 26) {
+    return res.status(400).send('Invalid argument shape!');
+  }
+  deleteItem(name);
+  res.send("item deleted!");
+})
