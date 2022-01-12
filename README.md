@@ -1,6 +1,8 @@
 # Backend Onboarding Project
 
-In this project, you'll be implementing the required backend functions to make a merchandise store function. This will be consumed by the completed version of the [Frontend Onboarding Project](linknotmadeyet).
+In this project, you'll be implementing the required backend functions to make a merchandise store function. This will be consumed by the completed version of the [Frontend Onboarding Project](https://github.com/acmucsd/frontend-onboarding-project).
+
+If you're looking for the slides for the presentation, check that out [here](https://docs.google.com/presentation/d/11Nw6POU-6kpVx5bcL1GPg-feVjUiNWPdjTVUfKMytW8)
 
 ## How to Run
 
@@ -25,7 +27,7 @@ We've detailed the required routes for the project here. We highly recommend tha
 
 ### Setting up your Database
 
-We intentionally hid the ORM abstraction layer from you initially. Please make sure you pull the DB layer by running `git pull orm` before starting the project.
+We intentionally hid the ORM abstraction layer from you initially. Please make sure you pull the DB layer by running `git merge origin/orm` before starting the project.
 
 A diagram detailing the database structure can be found [here](https://dbdiagram.io/d/61db423ef8370f0a2ee93059).
 
