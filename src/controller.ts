@@ -1,6 +1,6 @@
 import { Router, Request, Response } from "express";
 import path from "path";
-import { createItem } from "./service";
+import { createItem, deleteItem } from "./service";
 
 export const router = Router();
 
@@ -40,3 +40,9 @@ router.post('/item', (req: Request, res: Response) => {
     uuid
   });
 });
+
+router.post('/deleteItem', (req, res) => {
+  const name = req.body.name as string;
+  deleteItem(name);
+  res.send("wow deleted");
+})

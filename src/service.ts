@@ -26,3 +26,11 @@ export const createItem = (name: string, price: number) => {
   };
   return db[name].uuid;
 };
+
+export const deleteItem = (name: string) => {
+  // we will be deleting an item here
+  if (!(name in db)) {
+    throw new Error('item does not exist!');
+  }
+  delete db[name];
+}
