@@ -6,6 +6,8 @@ import { Item } from './models/Item';
 import { router } from './controller';
 
 import cors from 'cors'
+import { User } from './models/user';
+import { Order } from './models/Order';
 
 const app = Express();
 const port = process.env.PORT || 4000;
@@ -25,7 +27,7 @@ const main = async () => {
     password: "password",
     database: "testdb",
     entities: [
-      Item
+      Item, User, Order
     ],
     synchronize: true,
     logging: false

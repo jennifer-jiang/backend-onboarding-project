@@ -2,7 +2,7 @@ import { Entity, Column, PrimaryColumn, PrimaryGeneratedColumn, OneToMany, BaseE
 import { Order } from './Order';
 
 @Entity()
-export class Item extends BaseEntity {
+export class User extends BaseEntity {
   @PrimaryGeneratedColumn('uuid')
   uuid: string
 
@@ -10,12 +10,9 @@ export class Item extends BaseEntity {
   name: string
 
   @Column()
-  description: string
+  password: string
 
-  @Column({ type: 'float' })
-  price: number
-
-  @OneToMany(() => Order, order => order.item,
+  @OneToMany(() => Order, order => order.user,
     { onDelete: 'CASCADE' })
   orders: Order[]
 }
